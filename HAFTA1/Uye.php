@@ -1,5 +1,8 @@
 <?php
 
+	//Autoload'a koy
+	require "karakterCevirici.php";
+
 /**
  * 
  */
@@ -63,7 +66,9 @@ class Uye
 	//oluşturan fonksiyon
 	public function epostaOlustur()
 	{
-		$this->setEposta($this->isim.".".$this->soyisim."@gmail.com");
+		$isim = karakterCevirici::turkceKarakterleriCevir($this->isim);
+		$soyisim = karakterCevirici::turkceKarakterleriCevir($this->soyisim);
+		$this->setEposta($isim.".".$soyisim."@gmail.com");
 	}
 
 	//Eşsiz ve rastgele parola oluşturan fonksiyon

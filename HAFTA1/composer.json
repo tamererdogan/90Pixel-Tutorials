@@ -1,6 +1,5 @@
 {
     "require": {
-        "seld/cli-prompt": "^1.0",
-        "phpoffice/phpspreadsheet": "^1.6"
+        "phpoffice/phpspreadsheet": "^1.7",
     }
 }
